@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Link Weiterleitung</title>
+</head>
+<body>
+    <h1>Sie werden weitergeleitet...</h1>
+
+    <script>
+        function redirect() {
+            var appUrl = "com.amazon.mobile.shopping.web://amazon.de/PUMA-Fashion-Trainers-Sneakers-BLACK-PUMA/dp/B077MKHLCN/";
+            var webUrl = "https://www.amazon.de/PUMA-Fashion-Trainers-Sneakers-BLACK-PUMA/dp/B077MKHLCN/";
+            
+            // Versuche, die App zu öffnen
+            window.location.href = appUrl;
+            
+            // Warte 2 Sekunden und leite dann zum Web-Link weiter
+            setTimeout(function() {
+                window.location.href = webUrl;
+            }, 2000);
+        }
+
+        // Führe die Weiterleitung aus, sobald die Seite geladen ist
+        window.onload = redirect;
+    </script>
+</body>
+</html>
